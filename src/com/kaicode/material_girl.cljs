@@ -3,6 +3,7 @@
             [com.kaicode.mercury :as m]
             [cljsjs.material]))
 
+;;https://github.com/google/material-design-lite/wiki/How-the-Component-Handler-works
 (defn upgrade [this-component]
   (let [this-element (r/dom-node this-component)]
     (m/postpone #(js/componentHandler.upgradeElements this-element) 500)))
